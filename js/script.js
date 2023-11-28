@@ -79,3 +79,25 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+
+/*========== year ==========*/
+
+let footerText = document.querySelector('.footer .footer-text p b');
+
+
+let currentYear = new Date().getFullYear();
+
+footerText.textContent = currentYear;
+document.getElementById('sendMailButton').addEventListener('click', function() {
+    var fullName = document.getElementById('fullName').value;
+    var email = document.getElementById('email').value;
+    var mobileNumber = document.getElementById('mobileNumber').value;
+    var subject = document.getElementById('emailSubject').value;
+    var message = document.getElementById('message').value;
+
+    var mailtoLink = `mailto:cecitasolano@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Nombre: ' + fullName + '\nCorreo: ' + email + '\nTel: ' + mobileNumber + '\n\n' + message)}`;
+
+    window.open(mailtoLink, '_blank');
+});
+
+

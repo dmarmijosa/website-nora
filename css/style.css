@@ -788,9 +788,16 @@ span {
     .home-content h1 {
         font-size: 5rem;
     }
+    .home-content .social-media{
+        cursor: pointer;
+    }
 
     .home-content .social-media a {
         margin: 2.5rem .75rem 3rem;
+        cursor: pointer;
+    }
+    .home-content .social-media i {
+        cursor: pointer;
     }
 
     .home .profession-container {
@@ -807,6 +814,7 @@ span {
     }
 
     .home .profession-box .profession {
+        display: none;
         padding: 0 13px;
         left: auto;
         transform-origin: 0;
