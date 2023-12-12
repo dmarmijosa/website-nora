@@ -947,3 +947,26 @@ span {
 img {
     border-radius: 20px;
 }
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    opacity: 0.9;
+    color: #fff;
+    animation-name: fall, fade;
+    animation-duration: 10s, 10s;
+    animation-timing-function: linear, ease-in;
+    animation-iteration-count: infinite, 1;
+}
+
+@keyframes fall {
+    0% { top: -10px; }
+    100% { top: 100vh; }
+}
+
+@keyframes fade {
+    0% { opacity: 0.9; }
+    95% { opacity: 0.9; }
+    100% { opacity: 0; }
+}
